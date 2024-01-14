@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/handy-app/static/css/main.cd5dacea.css",
+    "main.js": "/handy-app/static/js/main.292617d1.js",
+    "static/js/787.045ebebf.chunk.js": "/handy-app/static/js/787.045ebebf.chunk.js",
+    "index.html": "/handy-app/index.html",
+    "main.cd5dacea.css.map": "/handy-app/static/css/main.cd5dacea.css.map",
+    "main.292617d1.js.map": "/handy-app/static/js/main.292617d1.js.map",
+    "787.045ebebf.chunk.js.map": "/handy-app/static/js/787.045ebebf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd5dacea.css",
+    "static/js/main.292617d1.js"
+  ]
+}
