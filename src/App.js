@@ -1,18 +1,23 @@
 import Navbar from "./components/Navbar";
-import Login from "./components/user/Login";
 import Notification from "./components/Notification"
-import Loading from "./components/Loading";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import Login from "./Pages/Login/Login";
 
 function App() {
-  
-  return (
-    <div>
-      <Loading/>
-      <Notification/>
-      <Login/>
-      <Navbar/>
-    </div>
-  );
+
+    return (
+        <>
+            <Navbar/>
+            <div>
+                <Routes>
+                    <Route path="/" element={<Login/>}/>
+                    <Route path="*" element={<ErrorPage/>}/>
+                </Routes>
+            </div>
+            <Notification/>
+        </>
+    );
 }
 
 export default App;
