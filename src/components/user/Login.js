@@ -52,7 +52,7 @@ const Login = () => {
     }
     return isValid
   }
-  const Passwordmatch = () => {
+  const validatePassword = () => {
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
     let isValid = true
