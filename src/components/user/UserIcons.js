@@ -1,7 +1,6 @@
 
 import { useValue } from "../../context/ContextProvider"
 import { useState } from "react"
-import useCheckToken from "../hooks/useCheckToken"
 import {
   Menu,
   MenuHandler,
@@ -16,7 +15,6 @@ import { Avatar } from "@mui/material";
  
 
 const UserIcons=()=>{
-  useCheckToken();
    const [anchorUserMenu,setAnchorUserMenu]=useState(null)
    
 const {dispatch,state:{currentUser}}=useValue()
