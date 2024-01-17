@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useValue} from 'context/ContextProvider';
+import {useValue} from 'Context/ContextProvider';
 import {jwtDecode} from 'jwt-decode';
 import {FaGoogle} from "react-icons/fa";
 

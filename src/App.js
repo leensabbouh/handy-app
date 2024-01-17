@@ -1,8 +1,8 @@
-import Navbar from "./components/Navbar";
-import Notification from "./components/Notification"
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import ErrorPage from "./Pages/ErrorPage/ErrorPage";
-import Login from "./Pages/Login/Login";
+import Navbar from "Components/NavBar/NavBar";
+import Notification from "Components/Notification"
+import { Routes, Route } from "react-router-dom";
+import ErrorPage from "Pages/ErrorPage/ErrorPage";
+import Login from "Pages/Login/Login";
 
 function App() {
 

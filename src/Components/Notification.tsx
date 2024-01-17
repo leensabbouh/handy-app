@@ -1,6 +1,6 @@
 import { Alert, Snackbar } from '@mui/material'
 import React from 'react'
-import { useValue } from 'context/ContextProvider';
+import { useValue } from 'Context/ContextProvider';
 
 const Notification = () => {
     const { state: { alert }, dispatch} =useValue();

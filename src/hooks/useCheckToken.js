@@ -1,5 +1,5 @@
 import  { useEffect } from 'react';
-import { useValue } from '../context/ContextProvider';
+import { useValue } from 'src/Context/ContextProvider';
 import { jwtDecode } from 'jwt-decode';
 
 const useCheckToken = () => {

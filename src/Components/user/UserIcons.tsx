@@ -1,4 +1,4 @@
-import {useValue} from "context/ContextProvider"
+import {useValue} from "Context/ContextProvider"
 import {useState} from "react"
 import useCheckToken from "hooks/useCheckToken"
 import {
@@ -25,11 +25,11 @@ const UserIcons = () => {
         <Menu>
             <MenuHandler>
                 <Button onClick={(e) => setAnchorUserMenu(e.currentTarget)}>
-                    {/*<Avatar*/}
-                    {/*    size="lg"*/}
-                    {/*    src={currentUser?.photoURL} alt={currentUser?.name}*/}
-                    {/*    className="border border-blue-500 shadow-xl shadow-blue-500/20 ring-4 ring-blue-400/30 bg-transparent"*/}
-                    {/*>{currentUser?.name?.charAt(0).toUpperCase()}</Avatar>*/}
+                    <Avatar
+                        size="lg"
+                        src={currentUser?.photoURL} alt={currentUser?.name}
+                        className="border border-blue-500 shadow-xl shadow-blue-500/20 ring-4 ring-blue-400/30 bg-transparent"
+                    >{currentUser?.name?.charAt(0).toUpperCase()}</Avatar>
                 </Button>
             </MenuHandler>
             <MenuList className="bg-black shadow-blue-500/20 border-blue-500 rounded z-20 py-2">

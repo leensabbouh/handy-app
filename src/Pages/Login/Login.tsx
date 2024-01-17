@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {useValue} from 'context/ContextProvider';
+import {useValue} from 'Context/ContextProvider';
 import GoogleOneTapLogin from 'components/user/GoogleOneTapLogin';
 import PasswordField from 'components/user/PasswordField';
 

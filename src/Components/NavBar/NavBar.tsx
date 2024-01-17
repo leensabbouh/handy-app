@@ -1,10 +1,9 @@
-import UserIcons from "components/user/UserIcons";
-import { useValue } from "context/ContextProvider";
-import React from "react";
+import UserIcons from "Components/user/UserIcons";
+import { useValue } from "Context/ContextProvider";
 
 const Navbar = () => {
     const {
-        state: {currentUser},
+        currentUser,
         dispatch
     } = useValue()
     return (

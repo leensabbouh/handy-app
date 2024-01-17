@@ -1,18 +1,18 @@
-import { createContext, useContext, useEffect, useReducer } from "react"
-import reducer from "./reducer"
+import { createContext, useContext, useEffect, useReducer, Context } from "react"
+import reducer from "Context/reducer"
 
-const intialState={
+const initialState={
     currentUser:null,
     openLogin:false,
     loading:false,
     alert:{open:false, severity:'info', message:''},
 }
-const Context=createContext(intialState)
+const Context=createContext(initialState)
 export const useValue =()=>{
     return useContext(Context)
 }
 const ContextProvider=({children})=>{
-    const [state,dispatch]=useReducer(reducer,intialState);
+    const [state,dispatch]=useReducer(reducer,initialState);
     useEffect(() => {
         const currentUser = JSON.parse(localStorage.getItem('currentUser'));
         if (currentUser) {
