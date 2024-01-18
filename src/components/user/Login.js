@@ -22,55 +22,23 @@ const Login = () => {
   const handleClose = () => {
     dispatch({ type: 'CLOSE_LOGIN' });
   };
-  const Passwordlength = () => {
-    const password = passwordRef.current.value;
-    const confirmPassword = confirmPasswordRef.current.value;
-    let isValid = true
-    if (password.length <= 5){
-      if (password !== confirmPassword) {
-        isValid = false
-      
-      } else{
-        dispatch({
-         type: 'UPDATE_ALERT',
-         payload: {
-           open: true,
-           severity: 'error',
-           message: 'password must be more than 6 characters',
-         },
-       });
-    } 
-  } else {console.log(password.length)
-       dispatch({
-        type: 'UPDATE_ALERT',
-        payload: {
-          open: true,
-          severity: 'error',
-          message: 'password must be more than 6 characters',
-        },
-      });
-    }
-    return isValid
-  }
   const validatePassword = () => {
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
     let isValid = true
-    if (password.length <= 5){
       if (password !== confirmPassword) {
+          isValid = false
+      dispatch({
+        type: 'UPDATE_ALERT',
+        payload: {
+          open: true,
+          severity: 'error',
+          message: 'Passwords do not match',
+        },
+      });
+    }
+    if (password.length < 6){  
         isValid = false
-      
-      } else{
-        dispatch({
-         type: 'UPDATE_ALERT',
-         payload: {
-           open: true,
-           severity: 'error',
-           message: 'password dont match confirmPassword',
-         },
-       });
-    } 
-  } else {console.log(password.length)
        dispatch({
         type: 'UPDATE_ALERT',
         payload: {
@@ -128,7 +96,16 @@ const Login = () => {
               payload: { email,  name},
             });
             dispatch({ type: 'CLOSE_LOGIN' });
-          }).catch(err => console.log(err.message))
+          }).catch(err =>{
+             dispatch({
+               type: 'UPDATE_ALERT',
+               payload: {
+                 open: true,
+                 severity: 'error',
+                 message: err.message,
+        },
+      });
+          })
           
         }
     } catch (error) {
